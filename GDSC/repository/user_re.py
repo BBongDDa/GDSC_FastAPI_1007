@@ -14,7 +14,7 @@ def signin(id: str, password: str, db: Session):
         return HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="그런 아이디 없는데?"
-        )
+        ) "아이디 오류"
     
     # Password도 맞는지 봐야지?
     if find_user.password != password:
